@@ -24,6 +24,7 @@ const hanldeSubmit=(e)=>{
         toast.success("Success")
       },
       (error) => {
+        toast.error("Failed")
         console.log(error.text);
       }
     );
@@ -41,13 +42,13 @@ const hanldeSubmit=(e)=>{
               <label className="form-label" htmlFor="name">
                 Name
               </label>
-              <input type="text" className="form-input" name="name" />
+              <input type="text" className="form-input" name="name" required />
             </div>
             <div className="form-row">
               <label className="form-label" htmlFor="email">
                 Email
               </label>
-              <input type="text" className="form-input" name="email" />
+              <input type="text" className="form-input" name="email" required />
             </div>
             <div className="form-row">
               <label className="form-label" htmlFor="">
