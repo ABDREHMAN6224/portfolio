@@ -5,11 +5,6 @@ const Projects = () => {
   return (
     <Wrapper >
         <div className="container">
-        <div className="btn-container">
-            <button type="button">Frontend</button>
-            <button type="button">backend</button>
-            <button type="button">Full stack</button>
-        </div>
         <div className="projects-container">
             <SingleProject/>
             <SingleProject/>
@@ -19,7 +14,6 @@ const Projects = () => {
             <SingleProject/>
             <SingleProject/>
         </div>
-
         </div>
     </Wrapper>
   )
@@ -34,30 +28,7 @@ const Wrapper = styled.div`
   .container {
     padding: 1rem 4rem;
   }
-  .btn-container {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
-    button {
-      /* color: wheat; */
-      /* background-color: #212223; */
-      font-weight: bold;
-      font-size: 1.15rem;
-      letter-spacing: 2px;
-      transition: all 0.3s ease-in-out;
-      color: #f8d696;
-      border: 2px solid #f8d696;
-      background: #212223;
-      cursor: pointer;
-      &:hover {
-        border: none;
-        background: #f8d696;
-        color: #212223;
-      }
-    }
-  }
+  
   .projects-container {
     padding-top: 3rem;
     width: 100%;
