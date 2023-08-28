@@ -19,7 +19,7 @@ const SmallScreenNavbar = () => {
         <div className="links">
           <Link path="/" onClick={closeSideBar} text="Home" />
           <Link path="/projects" text="Projects" onClick={closeSideBar} />
-          <Link path="/register" text="Contact" onClick={closeSideBar} />
+          <Link path="/contact" text="Contact" onClick={closeSideBar} />
         </div>
         <FaTimes onClick={closeSideBar} />
       </div>

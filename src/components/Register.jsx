@@ -30,12 +30,12 @@ const hanldeSubmit=(e)=>{
     );
 }
   return (
-    <Wrapper className="">
+    <Wrapper>
       <div className="main-container">
         <div className="img-container">
           <img src={team_img} alt="" />
         </div>
-        <div className="conatiner">
+        <div className="container">
           <h1>Message Me</h1>
           <form className="form" ref={form} action="" onSubmit={hanldeSubmit}>
             <div className="form-row">
@@ -74,34 +74,35 @@ const Wrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-right: 3rem;
-  /* min-height: 100vh; */
+  /* padding-right: 3rem; */
   padding-bottom: 20px;
   h1 {
-    /* font-size: 5rem; */
     color: white;
     margin: auto;
     text-align: center;
     padding: 1rem;
   }
   .main-container {
-    padding: 0rem 3rem;
-    /* padding-bottom: 0.5rem; */
-    width: 100%;
-    /* height: 100vh; */
+    padding: 0rem 2rem;
     display: grid;
     grid-template-columns: 1.5fr 2fr;
-    align-items: center;
+    place-items: center;
     gap: 2rem;
+  }
+  .container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* margin: 0 auto; */
   }
 
   .form {
+    min-width: 36vw;
     border-radius: 14px;
     border-top-right-radius: 0;
     border-top-left-radius: 0;
-    /* max-width: 800px; */
-
-    /* border: 3px dotted #2f3031; */
+  
     padding: 1rem;
     padding-top: 2rem;
     background: #70737f;
@@ -112,13 +113,11 @@ const Wrapper = styled.div`
     position: relative;
   }
   .form-row:nth-child(1) {
-    /* margin-top: 1.5rem; */
   }
 
   .form-label {
     position: absolute;
     padding: 2px 6px 4px 6px;
-    /* width: 95%; */
     color: white;
     font-family: "Varela Round", sans-serif;
     font-size: 1rem;
@@ -176,7 +175,6 @@ const Wrapper = styled.div`
     background: wheat;
   }
   .img-container {
-    /* max-height: 300px; */
     img {
       width: 100%;
       height: 100%;
@@ -195,6 +193,17 @@ const Wrapper = styled.div`
         font-size: 2rem;
         padding: 1rem;
       }
+    }
+    .form{
+      min-width: 80vw;
+    }
+  }
+  @media (max-width: 576px) {
+    .form{
+      min-width: 80vw;
+    }
+    .main-container{
+      place-items: center;
     }
   }
 `;

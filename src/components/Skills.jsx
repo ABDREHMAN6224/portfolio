@@ -56,8 +56,11 @@ a{
   .btn-container {
     text-align: center;
     margin-top: 6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
     button {
-      margin-right: 3rem;
       font-weight: bold;
       font-size: 1rem;
       transition: all 0.3s ease-in-out;
@@ -83,17 +86,18 @@ a{
     .skills-container{
       grid-template-columns: 1fr 1fr 1fr;
     }
+    .btn-container{
+      flex-direction: column;
+    }
     button{
-      margin-bottom: 15px;
+      /* margin: 0 auto; */
+      margin-bottom: 15px ;
     }
   }
   @media (max-width: 576px) {
     .skills-container{
       grid-template-columns: 1fr 1fr;
       gap: auto;
-    }
-    button{
-      margin-bottom: 15px;
     }
   }
 `;
