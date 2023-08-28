@@ -31,6 +31,7 @@ const MyIntro = () => {
         </div>
         <div className="image-container">
           <div className="image">
+            <img src={profile} alt="" srcset="" />
             <div className="image-cover"></div>
           </div>
         </div>
@@ -65,7 +66,7 @@ const Wrapper = styled.div`
       line-height: 1.4;
     }
     p {
-      width: 450px;
+      max-width: 450px;
       color: #888f96;
       letter-spacing: 1px;
       line-height: 1.7;
@@ -117,17 +118,19 @@ const Wrapper = styled.div`
     position: relative;
   }
   .image {
-    background-image: url(${({ profile }) => profile});
-    background-repeat: no-repeat;
     border-radius: 100%;
     width: 370px;
-    height: 430px;
+    height: 370px;
     overflow: hidden;
-    background-size: contain;
-    /* margin: auto; */
     position: relative;
-    /* width: 200px;
-    height: 200px; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    img{
+      width: 100%;
+      height: 100%;
+    }
   }
   .image-cover {
     position: absolute;
@@ -150,6 +153,27 @@ const Wrapper = styled.div`
       }
       .info-container{
         order: 1;
+        p{
+          width: auto;
+        }
+      }
+    }
+
+    @media (max-width: 576px) {
+      .main-container{
+        padding: 1rem;
+      }
+      .info-container{
+        
+        p{
+          width: auto;
+        }
+      }
+      .image-container{
+        .image{
+          width: 200px;
+          height: 200px;
+        }
       }
     }
   `;

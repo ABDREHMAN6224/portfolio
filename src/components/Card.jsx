@@ -19,7 +19,7 @@ export default Card
 const Wrapper = styled.div`
   display: grid;
   padding: 20px;
-  grid-template-rows: 150px 100px 1fr;
+  grid-template-rows: 150px auto 1fr;
   background: #2d2c2c;
   border-radius: 8%;
   border-top-left-radius: 0;

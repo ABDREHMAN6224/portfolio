@@ -51,7 +51,7 @@ a{
     padding-top: 3rem;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-    gap: 2rem;
+    gap: 1rem;
   }
   .btn-container {
     text-align: center;
@@ -90,6 +90,7 @@ a{
   @media (max-width: 576px) {
     .skills-container{
       grid-template-columns: 1fr 1fr;
+      gap: auto;
     }
     button{
       margin-bottom: 15px;

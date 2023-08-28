@@ -73,7 +73,7 @@ const Wrapper = styled.div`
   p {
     color: #97a0a8;
     line-height: 1.75;
-    width: 600px;
+    max-width: 600px;
   }
   button {
     margin-top: 2rem;
@@ -105,15 +105,17 @@ const Wrapper = styled.div`
     }
     .info {
       h3,p {
-        width: 500px;
+        max-width: 500px;
+        width: auto;
       }
     }
   }
 
   @media (max-width: 576px) {
-    /* h3{} */
     p,h3{
+      /* color: blue; */
       max-width: 400px;
+      width: auto;
     }
   }
 `;

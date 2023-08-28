@@ -57,4 +57,11 @@ const Wrapper = styled.div`
   .copyright{
     color: #aba9a9;
   }
+  @media (max-width:576px){
+    .contacts{
+      flex-direction: column;
+      gap: 0;
+      margin-bottom: 10px;
+    }
+  }
 `;

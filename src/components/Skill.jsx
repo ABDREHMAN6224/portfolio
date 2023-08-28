@@ -17,6 +17,7 @@ const Skill = ({head,ic,desc}) => {
 export default Skill
 const Wrapper = styled.div`
   display: grid;
+  place-items: center;
   padding-top: 20px;
   grid-template-rows: 70px 1fr;
   background: #404243;
@@ -26,8 +27,8 @@ const Wrapper = styled.div`
   line-height: 1.5;
   box-shadow: 3px 2px 3px rgba(0, 0, 0, 0.4), -2px -1px 3px rgba(0, 0, 0, 0.4);
   svg {
-    width: 100%;
-    height: 100%;
+    font-size: 3rem;
+    /* height: 100%; */
     color: #f4d499;
   }
   .head {
@@ -36,5 +37,14 @@ const Wrapper = styled.div`
     color: white;
     text-align: center;
     margin-bottom: 1.5rem;
+  }
+  @media (max-width:576px){
+    place-items: center;
+    .head{
+      padding: 5px;
+      font-size: 1rem;
+
+    }
+    
   }
 `;
