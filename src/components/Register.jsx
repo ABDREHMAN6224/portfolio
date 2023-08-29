@@ -74,7 +74,6 @@ const Wrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  /* padding-right: 3rem; */
   padding-bottom: 20px;
   h1 {
     color: white;
@@ -135,6 +134,7 @@ const Wrapper = styled.div`
     border-radius: 6px;
     border: 1px solid #565353;
     border-top-left-radius: 0px;
+    font-family: "Varela Round", sans-serif;
     background: #404243;
     padding: 0 10px;
     font-size: 18px;
@@ -144,6 +144,7 @@ const Wrapper = styled.div`
   }
   .text-area {
     resize: none;
+    font-family: "Varela Round", sans-serif;
     border-radius: 6px;
     border: 1px solid #565353;
     border-top-left-radius: 0px;
@@ -155,6 +156,7 @@ const Wrapper = styled.div`
     font-size: 16px;
     max-width: 95%;
     width: 95%;
+    line-height: 1.5;
   }
   .submit-btn {
     width: 100%;
