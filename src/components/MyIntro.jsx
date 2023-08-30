@@ -1,6 +1,6 @@
 import React from 'react'
 import { styled } from 'styled-components';
-import profile from "../images/profile.jpg";
+import profile from "../images/profile.jpeg";
 
 
 const MyIntro = () => {
