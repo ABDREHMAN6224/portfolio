@@ -31,7 +31,7 @@ const Wrapper = styled.div`
   }
   .head {
     padding: 1rem;
-    padding-bottom: 0rem;
+    padding-bottom: 1rem;
     color: white;
   }
   .detail {
