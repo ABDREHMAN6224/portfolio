@@ -46,3 +46,32 @@ button{
   min-height: 100vh;
 }
 
+::-webkit-scrollbar-button{
+  height: 0;
+}
+::-webkit-scrollbar-thumb{
+  background-color: wheat;
+  height: 1px;
+  border-radius: 30px;
+  width: 0.25rem;
+  opacity: 0;
+  /* display: none; */
+  
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgb(243, 199, 120);
+}
+::-webkit-scrollbar{
+  width: 0.3rem;
+  background-color: #404243  ;
+}
+::-webkit-scrollbar:hover{
+  width: 0.3rem;
+}
+
+
+
+::-webkit-scrollbar-track{
+  width: 10px ;
+  background-color: transparent   ;
+}
