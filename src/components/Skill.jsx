@@ -1,31 +1,91 @@
-import React from 'react'
-import { styled } from 'styled-components'
+import React from "react";
+import { styled } from "styled-components";
+import { BsStar, BsStarFill, BsStarHalf } from "react-icons/bs";
 
-const Skill = ({head,ic,desc}) => {
+const Skill = ({ head, ic, stars }) => {
+  const generateStars = Array.from({ length: 5 }, (_, index) => {
+    const number = index + 0.5;
+    return (
+      <span key={index}>
+        {stars >= index + 1 ? (
+          <BsStarFill />
+        ) : stars >= number ? (
+          <BsStarHalf />
+        ) : (
+          <BsStar />
+        )}
+      </span>
+    );
+  });
   return (
+    <Wrapper className="card">
+      <div className="container">
+
+      <div className="front">
+      <div className="image">{ic}</div>
+      <h3 className="head">{head}</h3>
+      </div>
+      <div className="back">
+        <p className="star">{generateStars}</p>
+        <p>{Math.round(stars*20,0)}%</p>
+      </div>
+      </div>
     
-      <Wrapper className="card">
-        <div className="image">
-          {ic}
-        </div>
-        <h3 className="head">{head}</h3>
-      </Wrapper>
-
+    </Wrapper>
   );
-}
+};
 
-export default Skill
+export default Skill;
 const Wrapper = styled.div`
-  display: grid;
-  place-items: center;
-  padding-top: 20px;
-  grid-template-rows: 70px 1fr;
-  background: #404243;
-  border-radius: 8%;
-  border-top-left-radius: 0;
-  border-bottom-right-radius: 0;
-  line-height: 1.5;
-  box-shadow: 3px 2px 3px rgba(0, 0, 0, 0.4), -2px -1px 3px rgba(0, 0, 0, 0.4);
+    .container{
+    background: #404243;
+    border-radius: 8%;
+    border-top-left-radius: 0;
+    border-bottom-right-radius: 0;
+    line-height: 1.5;
+    box-shadow: 3px 2px 3px rgba(0, 0, 0, 0.4), -2px -1px 3px rgba(0, 0, 0, 0.4);
+    height:10rem;
+    position: relative;
+    transition: transform 1000ms;
+    transform-style: preserve-3d;
+    }
+      .container:hover{
+        cursor: pointer;
+        transform: rotateY(180deg);
+      }
+    
+    .front,.back{
+      position: absolute;
+      inset: 0;
+      backface-visibility: hidden;
+    }
+    .front{
+      display: grid;
+      place-items: center;
+      padding-top: 20px;
+      grid-template-rows: 70px 1fr;
+      
+    }
+    
+    .back {
+      padding-top: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background-color: inherit;
+      transform: rotateY(180deg);
+      
+    p{
+      color: wheat;
+      font-weight: bold;
+    }
+  }
+  .star svg {
+    font-size: 1rem;
+    margin: 5px;
+    /* color: red; */
+  }
   svg {
     font-size: 3rem;
     /* height: 100%; */
@@ -38,13 +98,11 @@ const Wrapper = styled.div`
     text-align: center;
     margin-bottom: 1.5rem;
   }
-  @media (max-width:576px){
+  @media (max-width: 576px) {
     place-items: center;
-    .head{
+    .head {
       padding: 5px;
       font-size: 1rem;
-
     }
-    
   }
 `;

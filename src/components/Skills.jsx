@@ -1,50 +1,43 @@
-import React from 'react'
-import { styled } from 'styled-components'
-import Title from './Title'
-import Skill from './Skill'
-import {
-  FaCss3,
-  FaReact,
-  FaHtml5,
-  FaNodeJs,
-  FaPython,
-} from "react-icons/fa";
-import {
-  BiLogoMongodb,
-} from "react-icons/bi";
-import { useNavigate } from 'react-router-dom';
+import React from "react";
+import { styled } from "styled-components";
+import Title from "./Title";
+import Skill from "./Skill";
+import { FaCss3, FaReact, FaHtml5, FaNodeJs, FaPython } from "react-icons/fa";
+import { BiLogoMongodb } from "react-icons/bi";
+import { useNavigate } from "react-router-dom";
 const Skills = () => {
-  const navigate=useNavigate()
-  const linkedin="https://www.linkedin.com/in/abdul-rehman-memon-9a908924b/"
+  const navigate = useNavigate();
+  const linkedin = "https://www.linkedin.com/in/abdul-rehman-memon-9a908924b/";
+
   return (
     <Wrapper className="page">
       <Title text="My Expertise" />
       <div className="skills-container">
-        <Skill head={"HTML5"} ic={<FaHtml5 />} />
-        <Skill head={"CSS3"} ic={<FaCss3 />} />
-        <Skill head={"NODE JS"} ic={<FaNodeJs />} />
-        <Skill head={"REACT JS"} ic={<FaReact />} />
-        <Skill head={"PYTHON"} ic={<FaPython />} />
-        <Skill head={"DATABASES"} ic={<BiLogoMongodb />} />
+        <Skill head={"HTML5"} ic={<FaHtml5 />} stars={5} />
+        <Skill head={"CSS3"} ic={<FaCss3 />} stars={5} />
+        <Skill head={"NODE JS"} ic={<FaNodeJs />} stars={4.5} />
+        <Skill head={"REACT JS"} ic={<FaReact />} stars={5} />
+        <Skill head={"PYTHON"} ic={<FaPython />} stars={4.5} />
+        <Skill head={"DATABASES"} ic={<BiLogoMongodb />} stars={4.5} />
       </div>
       <div className="btn-container">
         <button>
-          <a href={linkedin} target='_blank'>
-          Go to My Linkedin
+          <a href={linkedin} target="_blank">
+            Go to My Linkedin
           </a>
         </button>
         <button onClick={() => navigate("/projects")}>See My Projects</button>
       </div>
     </Wrapper>
   );
-}
+};
 
-export default Skills
+export default Skills;
 const Wrapper = styled.div`
-a{
-  text-decoration: none;
-  color: inherit;
-}
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
   padding: 2rem;
   background-color: #212223;
   .skills-container {
@@ -78,24 +71,23 @@ a{
 
   @media (max-width: 990px) {
     .skills-container {
-      grid-template-columns: 1fr 1fr 1fr 1fr ;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
     }
   }
 
   @media (max-width: 768px) {
-    .skills-container{
+    .skills-container {
       grid-template-columns: 1fr 1fr 1fr;
     }
-    .btn-container{
+    .btn-container {
       flex-direction: column;
     }
-    button{
-      /* margin: 0 auto; */
-      margin-bottom: 15px ;
+    button {
+      margin-bottom: 15px;
     }
   }
   @media (max-width: 576px) {
-    .skills-container{
+    .skills-container {
       grid-template-columns: 1fr 1fr;
       gap: auto;
     }
