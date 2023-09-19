@@ -37,9 +37,8 @@ const Skill = ({ head, ic, stars }) => {
 
 export default Skill;
 const Wrapper = styled.div`
-.card{
   perspective: 1000px;
-}
+
     .container{
     /* transform-style:preserve-3d ; */
     background: #404243;
