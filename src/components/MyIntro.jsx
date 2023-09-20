@@ -42,7 +42,6 @@ const MyIntro = () => {
 
 export default MyIntro
 const Wrapper = styled.div`
-  /* height: var(--page-height); */
   a{
     text-decoration: none;
     color: inherit;
@@ -92,8 +91,6 @@ const Wrapper = styled.div`
       /* background: wheat; */
     }
     .heading h1 {
-      /* color: #868d93; */
-      /* color: #9399ad; */
       color: white;
       font-weight: 700;
       font-size: 4rem;
@@ -138,9 +135,7 @@ const Wrapper = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    /* 
-    background-color: rgba(0, 0, 0, 0.2);
-    */
+    
   }
   
     @media (max-width: 990px) {
@@ -163,6 +158,7 @@ const Wrapper = styled.div`
       .main-container{
         padding: 1rem;
       }
+      
       .info-container{
         
         p{
@@ -176,4 +172,21 @@ const Wrapper = styled.div`
         }
       }
     }
+    @media (max-width:330px){
+      .info-container .heading h1{
+        font-size: 3.5rem;
+      }
+      .info-container .heading h1 span {
+    font-size: 3.5rem;
+    color: #f4c876;
+    }
+      .info-container{
+      
+        p{
+          width: 250px;
+        }
+      }
+      
+    }
   `;
+  

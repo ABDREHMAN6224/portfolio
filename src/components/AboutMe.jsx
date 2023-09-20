@@ -40,7 +40,7 @@ const AboutMe = () => {
 export default AboutMe
 const Wrapper = styled.div`
   background-color: #212223;
-  padding: 2rem;
+  /* padding: 2rem; */
   .heading {
     position: relative;
     display: flex;
