@@ -7,7 +7,7 @@ const MyIntro = () => {
   
   return (
     <Wrapper profile={profile} className="page">
-      <div className="main-container">
+      <div className="main-container ">
         <div className="info-container">
           <div className="heading">
             <h1>
@@ -51,13 +51,12 @@ const Wrapper = styled.div`
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
-    padding: 3rem 2rem;
+    /* padding: 3rem 2rem; */
     gap: 1rem;
     padding-top: 5rem;
   }
   .info-container {
     padding-top: 0.5rem;
-    padding-right: 2.5rem;
     padding-bottom: 1rem;
     .heading {
       position: relative;
@@ -74,8 +73,6 @@ const Wrapper = styled.div`
     button {
       margin-top: 2rem;
       letter-spacing: 2px;
-      /* background: #212223; */
-      /* color: wheat; */
       font-weight: bold;
       font-size: 1rem;
       margin-right: 1.5rem;
@@ -123,7 +120,7 @@ const Wrapper = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-  
+    
     img{
       width: 100%;
       height: 100%;
@@ -138,24 +135,25 @@ const Wrapper = styled.div`
     
   }
   
-    @media (max-width: 990px) {
-      .main-container{
-        grid-template-columns: 1fr;
-        place-items: center;
-      }
-      .image-container{
-        order: 0;
-      }
-      .info-container{
-        order: 1;
-        p{
-          width: auto;
-        }
+  @media (max-width: 990px) {
+    .main-container{
+      grid-template-columns: 1fr;
+      place-items: center;
+    }
+    .image-container{
+      order: 0;
+    }
+    .info-container{
+      order: 1;
+      p{
+        width: auto;
       }
     }
-
-    @media (max-width: 576px) {
+  }
+  
+  @media (max-width: 576px) {
       .main-container{
+        justify-content: center;
         padding: 1rem;
       }
       

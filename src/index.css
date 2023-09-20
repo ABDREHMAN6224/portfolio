@@ -56,7 +56,6 @@ button {
 .page {
   background-color: #404243;
   padding: 3rem 2rem;
-  /* min-height: 100vh; */
 }
 
 ::-webkit-scrollbar-button {
@@ -69,7 +68,6 @@ button {
   border-radius: 30px;
   width: 0.25rem;
   opacity: 0;
-  /* display: none; */
 
 }
 
@@ -82,9 +80,6 @@ button {
   background-color: #404243;
 }
 
-::-webkit-scrollbar:hover {
-  width: 0.3rem;
-}
 
 
 
