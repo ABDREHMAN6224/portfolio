@@ -1,12 +1,10 @@
 import React,{useState} from 'react'
 import { styled } from 'styled-components'
 
-import mart from "../images/mart.png";
-import master from "../images/master.png";
 
-const SingleProject = () => {
+const SingleProject = ({name,img,github,website}) => {
         const [show, setShow] = useState(false);
-
+        console.log(github,website);
   return (
     <Wrapper>
       <div
@@ -14,11 +12,11 @@ const SingleProject = () => {
         onMouseOver={() => setShow(true)}
         onMouseOut={() => setShow(false)}
       >
-          <img src={master} alt="" />
-          <p className="name">AR MART</p>
+          <img src={img} alt={name} />
+          <p className="name">{name}</p>
         <div className={show ? "navigate show" : "navigate"}>
-          <button className="github">github</button>
-          <button className="website">website</button>
+          <a href={github} target='_blank'><button className="github">github</button></a>
+          <a href={website} target='_blank'><button className="website">website</button></a>
         </div>
       </div>
     </Wrapper>
@@ -28,6 +26,10 @@ const SingleProject = () => {
 export default SingleProject
 
 const Wrapper = styled.div`
+a{
+  text-decoration: none;
+  color: inherit;
+}
   background-color: #212223;
   width: 280px;
   height: 200px;
@@ -57,6 +59,7 @@ const Wrapper = styled.div`
     justify-content: center;
     background-color: #121212a8;
     gap: 1rem;
+
     button {
       background: wheat;
       letter-spacing: 2px;
@@ -69,6 +72,15 @@ const Wrapper = styled.div`
       &:hover {
         color: wheat;
         background: #212223;
+      }
+    }
+    .website{
+      background: #212223;
+      color: wheat;
+      &:hover{
+        color: #212223;
+        background: wheat;
+        
       }
     }
   }

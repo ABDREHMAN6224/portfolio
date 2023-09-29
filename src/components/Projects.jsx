@@ -1,18 +1,18 @@
 import React, { useState } from 'react'
 import { styled } from 'styled-components'
 import SingleProject from './SingleProject'
+import { projects } from '../data'
+
 const Projects = () => {
   return (
     <Wrapper >
         <div className="container">
         <div className="projects-container">
-            <SingleProject/>
-            <SingleProject/>
-            <SingleProject/>
-            <SingleProject/>
-            <SingleProject/>
-            <SingleProject/>
-            <SingleProject/>
+          {
+            projects.map((p,i)=>{
+              return <SingleProject key={i} {...p}/>
+            })
+          }
         </div>
         </div>
     </Wrapper>
