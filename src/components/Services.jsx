@@ -48,7 +48,7 @@ a{
   text-decoration: none;
   color: inherit;
 }
-  padding: 2rem;
+  /* padding: 2rem; */
   display: flex;
   flex-direction: column;
   justify-content: center;

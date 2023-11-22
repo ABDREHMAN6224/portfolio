@@ -10,7 +10,7 @@ const Navbar = () => {
     const {openSideBar}=useAppContext()
   return (
     <Wrapper>
-      <div className="logo">
+      <div className="log">
         <h1 className="logo">AR</h1>
       </div>
       <div className="social-links-container">
@@ -55,6 +55,8 @@ z-index: 1;
     font-size: 4rem;
     color: wheat;
   }
+  
+
   .social-links-container{
     display: flex;
     align-items: center;
@@ -93,15 +95,15 @@ z-index: 1;
     color: white;
   }
   .nav-links-container {
-    padding: auto 1rem;
+    padding: auto 0rem;
   }
   .nav-links {
     display: flex;
-    justify-content: center;
+    justify-content: right;
     align-items: center;
   }
   .link {
-    padding: 5px 10px;
+    /* padding: 5px 10px; */
   }
   .bar{
     font-size: 2rem;

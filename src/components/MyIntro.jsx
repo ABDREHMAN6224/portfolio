@@ -20,10 +20,9 @@ const MyIntro = () => {
               , and I have a strong passion for creating professional websites.
             </p>
             <div className="btn-container">
-              {/* <button>Projects</button> */}
               <button className="contact">
                 <a href="cv.pdf" target='_blank' download={"cv.pdf"}>
-                  Download My cv
+                  Download My CV
                 </a>
               </button>
             </div>
@@ -108,7 +107,7 @@ const Wrapper = styled.div`
   .image-container {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: right;
     position: relative;
   }
   .image {
@@ -185,6 +184,9 @@ const Wrapper = styled.div`
         }
       }
       
+    }
+    a{
+      letter-spacing: 0px!important;
     }
   `;
   

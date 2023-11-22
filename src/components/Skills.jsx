@@ -38,7 +38,7 @@ const Wrapper = styled.div`
     text-decoration: none;
     color: inherit;
   }
-  padding: 2rem;
+  /* padding: 2rem; */
   background-color: #212223;
   .skills-container {
     padding-top: 3rem;
