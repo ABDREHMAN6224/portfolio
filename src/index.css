@@ -87,3 +87,9 @@ button {
   width: 10px;
   background-color: transparent;
 }
+
+@media (max-width:576px) {
+  .page {
+    padding: 3rem;
+  }
+}
