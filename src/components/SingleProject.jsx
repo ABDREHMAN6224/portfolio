@@ -102,7 +102,10 @@ a{
       -3px -3px 2px rgba(205, 194, 194, 0.3);
     scale: 1.05;
   }
-
+@media (min-width: 1550px) {
+    width: 380px;
+    height: 280px;
+  }
   @media (max-width: 990px) {
     width: 280px;
     height: 200px;

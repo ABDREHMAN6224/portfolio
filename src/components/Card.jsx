@@ -18,7 +18,7 @@ const Card = ({image,head,desc}) => {
 export default Card
 const Wrapper = styled.div`
   display: grid;
-  padding: 20px;
+  padding: 25px;
   grid-template-rows: 150px auto 1fr;
   background: #2d2c2c;
   border-radius: 8%;
@@ -38,5 +38,14 @@ const Wrapper = styled.div`
     padding: 1rem;
     padding-top: 0;
     color: #908b8b;
+  }
+  @media (min-width: 1550px) {
+    gap: 20px;
+    h3.head {
+      font-size: 1.75rem;
+    }
+    p{
+      font-size: 1.25rem;
+    }
   }
 `;

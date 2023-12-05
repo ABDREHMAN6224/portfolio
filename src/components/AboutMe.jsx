@@ -93,6 +93,11 @@ const Wrapper = styled.div`
     width: 90%;
     height: 90%;
   }
+  .image{
+    display: flex;
+    align-items: center;
+    justify-content: right;
+  }
 
   @media (max-width: 990px) {
     .info-container {
@@ -116,6 +121,25 @@ const Wrapper = styled.div`
       /* color: blue; */
       max-width: 400px;
       width: auto;
+    }
+  }
+  @media (min-width: 1550px) {
+    .info-container {
+      gap: 15rem;
+    }
+    h1{
+      font-size: 4rem;
+    }
+    h3{
+      font-size: 2.5rem;
+      width: 700px;
+    }
+    p{
+      font-size: 1.25rem;
+      max-width: 700px;
+    }
+    button{
+      font-size: 1.25rem;
     }
   }
 `;

@@ -56,6 +56,7 @@ button {
 .page {
   background-color: #404243;
   padding: 3rem 5rem;
+  min-height: 73.7vh;
 }
 
 ::-webkit-scrollbar-button {

@@ -151,42 +151,58 @@ const Wrapper = styled.div`
   }
   
   @media (max-width: 576px) {
-      .main-container{
-        justify-content: center;
-        padding: 1rem;
-      }
+    .main-container{
+      justify-content: center;
+      padding: 1rem;
+    }
+    
+    .info-container{
       
-      .info-container{
-        
-        p{
-          width: auto;
-        }
-      }
-      .image-container{
-        .image{
-          width: 200px;
-          height: 200px;
-        }
+      p{
+        width: auto;
       }
     }
-    @media (max-width:330px){
-      .info-container .heading h1{
-        font-size: 3.5rem;
+    .image-container{
+      .image{
+        width: 200px;
+        height: 200px;
       }
-      .info-container .heading h1 span {
-    font-size: 3.5rem;
-    color: #f4c876;
     }
-      .info-container{
+  }
+  @media (max-width:330px){
+    .info-container .heading h1{
+      font-size: 3.5rem;
+    }
+    .info-container .heading h1 span {
+      font-size: 3.5rem;
+      color: #f4c876;
+    }
+    .info-container{
       
-        p{
-          width: 250px;
-        }
+      p{
+        width: 250px;
       }
-      
     }
-    a{
-      letter-spacing: 0px!important;
+    
+  }
+  a{
+    letter-spacing: 0px!important;
+  }
+  @media (min-width: 1550px) {
+    .heading h1{
+      font-size: 6rem !important;
     }
+    .heading span{
+      font-size: 6.3rem !important;
+    }
+    .heading p{
+      font-size: 1.4rem;
+      max-width: 600px;
+    }
+    .image{
+      width: 500px;
+      height: 500px;  
+    }
+  }
   `;
   

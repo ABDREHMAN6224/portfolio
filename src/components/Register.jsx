@@ -30,7 +30,7 @@ const hanldeSubmit=(e)=>{
     );
 }
   return (
-    <Wrapper>
+    <Wrapper className='page'>
       <div className="main-container">
         <div className="img-container">
           <img src={team_img} alt="" />
@@ -69,6 +69,7 @@ const hanldeSubmit=(e)=>{
 export default Register
 
 const Wrapper = styled.div`
+overflow-y: hidden;
   background-color: #404243;
   letter-spacing: 2px;
   display: flex;
@@ -86,7 +87,7 @@ const Wrapper = styled.div`
     display: grid;
     grid-template-columns: 1.5fr 2fr;
     place-items: center;
-    gap: 2rem;
+    gap: 3rem;
   }
   .container{
     display: flex;
@@ -206,6 +207,11 @@ const Wrapper = styled.div`
     }
     .main-container{
       place-items: center;
+    }
+  }
+  @media (min-width: 1550px) {
+    .main-container{
+      gap: 15rem;
     }
   }
 `;

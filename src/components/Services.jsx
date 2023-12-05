@@ -85,4 +85,10 @@ a{
 
     }
   }
+  @media (min-width: 1550px) {
+    h1{
+      font-size: 3.5rem !important;
+    }
+    
+  }
 `;

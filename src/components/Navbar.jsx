@@ -132,4 +132,19 @@ z-index: 1;
       visibility: visible;
     }
   }
+  @media (min-width: 1550px) {
+    .link{
+      font-size: 1.5rem;
+    }
+    .nav-links-container{
+      padding: auto 1rem;
+    }
+    .social-links-container{
+      padding: auto 1rem;
+      svg{
+
+        font-size: 1.5rem;
+      }
+    }
+  }
 `;
