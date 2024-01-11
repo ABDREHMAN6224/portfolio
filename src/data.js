@@ -19,13 +19,13 @@ export const projects = [
     },
     {
         img: dbs,
-        name: "Cricket Data Management System (psql Database)",
+        name: "Cricket Data Management System",
         github: "https://github.com/ABDREHMAN6224/CricketManagementSystem",
         website: ""
     },
     {
         img: dsa,
-        name: "Cricket Data Management System (psql Database)",
+        name: "DSA Visualizer",
         github: "https://github.com/ABDREHMAN6224/dsa_project_final",
         website: "https://dsa-visualizer-arm.netlify.app/"
     },
