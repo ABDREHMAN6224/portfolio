@@ -2,6 +2,8 @@ import mart from "./images/mart.png";
 import unsplash from "./images/unsplash.png";
 import gitdrill from "./images/gitdrill.png";
 import ar_chat from "./images/ar_chat.png";
+import dsa from "./images/dsa.png"
+import dbs from "./images/dbs.png"
 export const projects = [
     {
         img: mart,
@@ -14,6 +16,18 @@ export const projects = [
         name: "Ar Chats (uses Sockets)",
         github: "https://github.com/ABDREHMAN6224/chat-frontend",
         website: "https://archats-arm.netlify.app/"
+    },
+    {
+        img: dbs,
+        name: "Cricket Data Management System (psql Database)",
+        github: "https://github.com/ABDREHMAN6224/CricketManagementSystem",
+        website: ""
+    },
+    {
+        img: dsa,
+        name: "Cricket Data Management System (psql Database)",
+        github: "https://github.com/ABDREHMAN6224/dsa_project_final",
+        website: "https://dsa-visualizer-arm.netlify.app/"
     },
     {
         img: unsplash,
