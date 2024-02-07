@@ -2,8 +2,9 @@ import React from "react";
 import { styled } from "styled-components";
 import Title from "./Title";
 import Skill from "./Skill";
-import { FaCss3, FaReact, FaHtml5, FaNodeJs, FaPython } from "react-icons/fa";
-import { BiLogoMongodb } from "react-icons/bi";
+import { FaCss3, FaReact, FaHtml5, FaNodeJs, FaPython, FaDocker, } from "react-icons/fa";
+import {SiApachekafka} from "react-icons/si";
+import { BiLogoMongodb, BiLogoPostgresql, BiLogoGithub, BiLogoGit, BiLogoGraphql, BiLogoJavascript, BiLogoRedux} from "react-icons/bi";
 import { useNavigate } from "react-router-dom";
 const Skills = () => {
   const navigate = useNavigate();
@@ -15,10 +16,18 @@ const Skills = () => {
       <div className="skills-container">
         <Skill head={"HTML5"} ic={<FaHtml5 />} stars={5} />
         <Skill head={"CSS3"} ic={<FaCss3 />} stars={5} />
+        <Skill head={"JAVASCRIPT"} ic={<BiLogoJavascript />} stars={5} />
         <Skill head={"NODE JS"} ic={<FaNodeJs />} stars={4.5} />
         <Skill head={"REACT JS"} ic={<FaReact />} stars={5} />
+        <Skill head={"REDUX"} ic={<BiLogoRedux />} stars={4.5} />
         <Skill head={"PYTHON"} ic={<FaPython />} stars={4.5} />
-        <Skill head={"DATABASES"} ic={<BiLogoMongodb />} stars={4.5} />
+        <Skill head={"MONGODB"} ic={<BiLogoMongodb />} stars={4.5} />
+        <Skill head={"POSTGRES"} ic={<BiLogoPostgresql />} stars={4.5} />
+        <Skill head={"GRAPHQL"} ic={<BiLogoGraphql />} stars={4.5} />
+        <Skill head={"DOCKER"} ic={<FaDocker />} stars={4.5} />
+        <Skill head={"APACHE KAFKA"} ic={<SiApachekafka />} stars={4.5} />
+        <Skill head={"GIT"} ic={<BiLogoGit />} stars={5} />
+        <Skill head={"GITHUB"} ic={<BiLogoGithub />} stars={5} />
       </div>
       <div className="btn-container">
         <button>
