@@ -22,10 +22,10 @@ const Skills = () => {
         <Skill head={"REDUX"} ic={<BiLogoRedux />} stars={4.5} />
         <Skill head={"PYTHON"} ic={<FaPython />} stars={4.5} />
         <Skill head={"MONGODB"} ic={<BiLogoMongodb />} stars={4.5} />
-        <Skill head={"POSTGRES"} ic={<BiLogoPostgresql />} stars={4.5} />
+        {/* <Skill head={"POSTGRES"} ic={<BiLogoPostgresql />} stars={4.5} />
         <Skill head={"GRAPHQL"} ic={<BiLogoGraphql />} stars={4.5} />
         <Skill head={"DOCKER"} ic={<FaDocker />} stars={4.5} />
-        <Skill head={"APACHE KAFKA"} ic={<SiApachekafka />} stars={4.5} />
+        <Skill head={"APACHE KAFKA"} ic={<SiApachekafka />} stars={4.5} /> */}
         <Skill head={"GIT"} ic={<BiLogoGit />} stars={5} />
         <Skill head={"GITHUB"} ic={<BiLogoGithub />} stars={5} />
       </div>
