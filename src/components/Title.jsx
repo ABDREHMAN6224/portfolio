@@ -1,9 +1,18 @@
 import React from 'react'
 import { styled } from 'styled-components'
+import {useInView} from "react-intersection-observer"
+
 
 const Title = ({text}) => {
+  const [ref, inView] = useInView({
+    triggerOnce: true,
+    threshold: 0.3,
+  });
   return (
-    <Wrapper className="heading">
+    <Wrapper
+    ref={ref}
+    className={`heading ${inView ? "animate_from_bottom" : "hide"}`}
+    >
         <h1>{text}</h1>
         <div className="underline"></div>
     </Wrapper>

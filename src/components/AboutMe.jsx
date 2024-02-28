@@ -3,15 +3,29 @@ import { styled } from 'styled-components'
 import hacker from "../images/undraw_hacker_mind_-6-y85.svg"
 import Title from './Title';
 import { useNavigate } from 'react-router-dom';
+import {useInView} from "react-intersection-observer"
 
 const AboutMe = () => {
   const navigate=useNavigate()
+  const [ref, inView] = useInView({
+    triggerOnce: true,
+    threshold: 0.3,
+  });
+  const [ref1, inView1] = useInView({
+    triggerOnce: true,
+    threshold: 0.3,
+  });
   return (
     <Wrapper className="page">
-      <div className="container">
+      <div className="container" 
+
+      >
         <Title text="about me"/>
-        <div className="info-container">
-          <div className="info">
+        <div className="info-container"
+        >
+          <div   ref={ref1}
+            className={`info ${inView1? "animate_from_bottom" : "hide"}`}
+          >
             <div className="head-title">
             <h3>
               Passionate Full Stack Web Developer with a Knack for Building
@@ -28,7 +42,10 @@ const AboutMe = () => {
             </p>
             <button onClick={()=>navigate("/contact")}>Contact me</button>
           </div>
-          <div className="image">
+          <div 
+          ref={ref}
+          className={`image ${inView ? "animate_from_bottom" : "hide"}`}
+          >
             <img src={hacker} alt="" className="img" />
           </div>
         </div>
@@ -53,7 +70,10 @@ const Wrapper = styled.div`
     color: wheat;
     text-align: center;
   }
+  .info,.image {
+    transition: all 0.5s ease-in-out;
 
+  }
   .info-container {
     display: grid;
     grid-template-columns: 1fr 1fr;

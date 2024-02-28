@@ -1,10 +1,17 @@
 import React from 'react'
 import { styled } from 'styled-components';
-
+import {useInView} from "react-intersection-observer"
 
 const Card = ({image,head,desc}) => {
+  const [ref, inView] = useInView({
+    triggerOnce: true,
+    threshold: 0.3,
+  });
   return (
-    <Wrapper className="card">
+    <Wrapper
+    ref={ref}
+    className={`card ${inView ? "animate_from_bottom" : "hide"}`}
+    >
       <div className="image">
         <img src={image} alt="" />
       </div>

@@ -94,3 +94,20 @@ button {
     padding: 3rem;
   }
 }
+.hide{
+  opacity: 0;
+}
+.animate_from_bottom {
+  animation: moveFromBottom 1s ease-in-out;
+}
+
+@keyframes moveFromBottom {
+  0% {
+    transform: translateY(20%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

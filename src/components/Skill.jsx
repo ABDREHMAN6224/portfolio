@@ -1,8 +1,12 @@
 import React from "react";
 import { styled } from "styled-components";
 import { BsStar, BsStarFill, BsStarHalf } from "react-icons/bs";
-
+import { useInView } from "react-intersection-observer";
 const Skill = ({ head, ic, stars }) => {
+  const [ref, inView] = useInView({
+    triggerOnce: true,
+    threshold: 0.3,
+  });
   const generateStars = Array.from({ length: 5 }, (_, index) => {
     const number = index + 0.5;
     return (
@@ -18,7 +22,10 @@ const Skill = ({ head, ic, stars }) => {
     );
   });
   return (
-    <Wrapper className="card">
+    <Wrapper
+    ref={ref}
+    className={`card ${inView ? "animate_from_bottom" : "hide"}`}
+    >
       <div className="container">
 
       <div className="front">

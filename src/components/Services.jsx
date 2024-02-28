@@ -33,11 +33,6 @@ const Services = () => {
           }
         />
       </div>
-      <button>
-        <a href=" https://www.fiverr.com/abdulrehmanm959" target='_blank'>
-          See My Fiverr
-          </a>
-      </button>
     </Wrapper>
   );
 }

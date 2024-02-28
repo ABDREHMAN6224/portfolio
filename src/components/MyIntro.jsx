@@ -1,14 +1,26 @@
 import React from 'react'
 import { styled } from 'styled-components';
 import profile from "../images/profile.jpeg";
-
+import {useInView} from "react-intersection-observer"
 
 const MyIntro = () => {
-  
+
+  const [ref, inView] = useInView({
+    triggerOnce: true,
+    threshold: 0.3,
+  });
+  const [ref1, inView1] = useInView({
+    triggerOnce: true,
+    threshold: 0.3,
+  });
+
   return (
     <Wrapper profile={profile} className="page">
       <div className="main-container ">
-        <div className="info-container">
+        <div
+        ref={ref}
+        className={`info-container ${inView? "animate_from_bottom" : "hide"}`}
+        >
           <div className="heading">
             <h1>
               hi, I'm <br />
@@ -28,7 +40,10 @@ const MyIntro = () => {
             </div>
           </div>
         </div>
-        <div className="image-container">
+        <div
+        ref={ref1}
+        className={`image-container ${inView1 ? "animate_from_bottom" : "hide"}`}
+        >
           <div className="image">
             <img src={profile} alt="" srcset="" />
             <div className="image-cover"></div>
